@@ -1,0 +1,109 @@
+:root {
+  --bg: #f5f5f5;
+  --panel: #ffffff;
+  --ink: #222;
+  --accent: #2b6cb0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 16px;
+  padding: 16px;
+  align-items: start;
+}
+
+.canvas-wrap {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  display: grid;
+  justify-items: center;
+}
+
+canvas {
+  width: min(80vw, 640px);
+  height: auto;
+  image-rendering: pixelated;
+  border: 1px solid #ddd;
+}
+
+.canvas-title {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.panel {
+  display: grid;
+  gap: 12px;
+}
+
+.controls, .monitors {
+  background: var(--panel);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.row button, .row select {
+  padding: 6px 8px;
+}
+
+.label {
+  align-self: center;
+  font-size: 12px;
+  color: #555;
+}
+
+.sliders {
+  display: grid;
+  gap: 8px;
+  max-height: 60vh;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: 90px 1fr 60px;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+
+.slider input[type="range"] {
+  width: 100%;
+}
+
+.monitors pre {
+  margin: 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 960px) {
+  .app {
+    grid-template-columns: 1fr;
+  }
+  .row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

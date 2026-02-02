@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EMIT: Simulation + Test Suite"
+authors:
+  - family-names: "Hawkins"
+    given-names: "Neal"
+date-released: "2026-02-02"
+version: "v2026.02.02"
+doi: "10.5281/zenodo.18457553"
+license: "MIT"
+repository-code: "https://github.com/neal2hawkins-hub/EMIT_SIM"
+url: "https://github.com/neal2hawkins-hub/EMIT_SIM"
+preferred-citation:
+  type: generic
+  title: "EMIT: A Reproducible Computational Toy Model"
+  authors:
+    - family-names: "Hawkins"
+      given-names: "Neal"
+  year: 2026
+  doi: "10.5281/zenodo.18457553"

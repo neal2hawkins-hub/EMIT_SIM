@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EMIT Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="canvas-wrap">
+      <canvas id="sim" width="256" height="256"></canvas>
+      <div class="canvas-title" id="viewTitle">EMIT (Energy = V)</div>
+    </div>
+    <div class="panel">
+      <div class="controls">
+        <div class="row">
+          <button id="runBtn">Run</button>
+          <button id="resetBtn">Reset</button>
+          <button id="modeBtn">Mode: Poke</button>
+          <button id="viewBtn">View: Energy</button>
+        </div>
+        <div class="row">
+          <button id="saveBtn">Save PNG</button>
+          <label class="label">Size</label>
+          <select id="sizeSel">
+            <option value="256" selected>256</option>
+            <option value="512">512</option>
+          </select>
+        </div>
+        <div class="sliders" id="sliders"></div>
+      </div>
+      <div class="monitors">
+        <pre id="monitor"></pre>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
